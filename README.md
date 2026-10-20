@@ -1,5 +1,5 @@
-# AQCWS GitHub Pages Site
+# Applied Quantum Computing Winter School 2027
 
-Files for the official website of **Applied Quantum Computing Winter School 2027**.
+Official public website files for the Applied Quantum Computing Winter School at the University of Oulu.
 
-https://aqcws.github.io
+Website: https://aqcws.github.io

@@ -1,22 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Applied Quantum Computing Winter School, 15–19 March 2027, University of Oulu, Finland." />
-  <meta name="theme-color" content="#0c2340" />
+  <meta name="theme-color" content="#0a2342" />
   <title>Applied Quantum Computing Winter School 2027</title>
-  <link rel="icon" type="image/png" href="aq-logo-transparent.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="aq-symbol.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header" id="top">
-    <div class="container nav-wrap">
+    <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Applied Quantum Computing Winter School home">
-        <img src="aq-logo-transparent.png" alt="Applied Quantum Computing Winter School logo" />
+        <img src="aq-symbol.png" alt="AQ symbol" />
+        <span class="brand-text">
+          <strong>Applied Quantum Computing</strong>
+          <small>Winter School 2027</small>
+        </span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
@@ -26,7 +27,7 @@
       <nav class="nav-links" id="main-menu" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#topics">Topics</a>
-        <a href="#experience">Oulu</a>
+        <a href="#oulu">Oulu</a>
         <a href="#venue">Venue</a>
         <a href="#programme">Programme</a>
         <a href="#contact">Contact</a>
@@ -36,153 +37,127 @@
 
   <main>
     <section class="hero">
-      <img class="hero-bg" src="oulu-campus-night.png" alt="University of Oulu campus in winter" />
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
+      <img class="hero-image" src="oulu-campus-night.png" alt="University of Oulu campus in winter" />
+      <div class="hero-shade"></div>
+      <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">University of Oulu · Finland</p>
-          <h1>Applied Quantum Computing Winter School 2027</h1>
+          <p class="eyebrow light">University of Oulu · Finland</p>
+          <h1>Applied Quantum Computing Winter School</h1>
+          <p class="hero-year">2027</p>
           <p class="hero-date">15–19 March 2027</p>
-          <p class="hero-lead">A five-day intensive winter school covering the quantum computing stack through expert lectures, hands-on sessions, participant talks, and community building.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#about">Explore the school</a>
-            <a class="btn btn-secondary" href="#contact">Get in touch</a>
-          </div>
+          <p class="hero-lead">Five days of intensive learning across the quantum computing stack, combining expert lectures, hands-on sessions, participant talks, and networking with academia and industry.</p>
+          <a class="button" href="#about">Explore the school</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="text-block">
-          <p class="section-kicker">About the event</p>
+      <div class="container editorial-grid">
+        <div class="section-heading">
+          <p class="eyebrow">About the event</p>
           <h2>A practical winter school for the next quantum workforce</h2>
-          <p>The Applied Quantum Computing Winter School is a five-day intensive programme designed for PhD researchers and advanced Master’s students. It is organised by QDOC doctoral researchers at the University of Oulu under the supervision of Professor Matti Silveri.</p>
-          <p>The school brings together the full quantum computing stack — from hardware and control to open quantum systems, algorithms, applications, and the wider quantum ecosystem. Participants will gain practical experience running quantum circuits and engage directly with researchers and industry professionals.</p>
         </div>
-        <figure class="media-card media-landscape">
-          <img src="oulu-snow-panorama.png" alt="Snow-covered Oulu landscape" />
-        </figure>
+        <div class="body-copy">
+          <p>The Applied Quantum Computing Winter School is a five-day intensive programme designed for PhD researchers and advanced Master’s students. It is organised by QDOC doctoral researchers at the University of Oulu under the supervision of Professor Matti Silveri.</p>
+          <p>The school covers the quantum computing stack from hardware and control to open quantum systems, algorithms, applications, and the wider quantum ecosystem. Participants will gain practical experience running quantum circuits and engage directly with researchers and industry professionals.</p>
+        </div>
       </div>
     </section>
 
     <section class="section section-soft" id="topics">
       <div class="container">
-        <p class="section-kicker">Core themes</p>
-        <h2>Topics</h2>
-        <div class="topics-grid">
-          <article class="topic-card"><span>01</span><h3>Superconducting Qubits</h3></article>
-          <article class="topic-card"><span>02</span><h3>Control Layer</h3></article>
-          <article class="topic-card"><span>03</span><h3>Open Quantum Systems</h3></article>
-          <article class="topic-card"><span>04</span><h3>Algorithms &amp; Applications</h3></article>
-          <article class="topic-card"><span>05</span><h3>Careers &amp; Quantum Ecosystem</h3></article>
+        <div class="section-heading compact">
+          <p class="eyebrow">Core themes</p>
+          <h2>Topics</h2>
+        </div>
+        <div class="topic-grid">
+          <article><span>01</span><h3>Superconducting Qubits</h3></article>
+          <article><span>02</span><h3>Control Layer</h3></article>
+          <article><span>03</span><h3>Open Quantum Systems</h3></article>
+          <article><span>04</span><h3>Algorithms &amp; Applications</h3></article>
+          <article><span>05</span><h3>Careers &amp; Quantum Ecosystem</h3></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="experience">
+    <section class="section" id="oulu">
       <div class="container">
-        <div class="section-head narrow-head">
-          <p class="section-kicker">Oulu in winter</p>
-          <h2>The setting around the school</h2>
-          <p>The winter school is also about the experience of Oulu — its snowy paths, peaceful streets, and inspiring northern atmosphere.</p>
-        </div>
-
-        <div class="experience-grid">
-          <figure class="media-card media-portrait">
-            <img src="oulu-forest-path.png" alt="Snowy forest path in Oulu" />
-          </figure>
-
-          <div class="audience-panel">
-            <p class="section-kicker">Who should attend?</p>
-            <div class="stack-list">
-              <div>
-                <h3>PhD Researchers</h3>
-                <p>Early-career scientists aiming for roles in quantum labs, companies, and research institutes.</p>
-              </div>
-              <div>
-                <h3>Master’s Students</h3>
-                <p>Advanced students in physics, computer science, engineering, and related disciplines entering the quantum workforce.</p>
-              </div>
-              <div>
-                <h3>International Lecturers</h3>
-                <p>Invited experts and speakers from across Europe.</p>
-              </div>
-            </div>
+        <div class="oulu-header">
+          <div class="section-heading compact">
+            <p class="eyebrow">Oulu in winter</p>
+            <h2>A northern setting for focused learning</h2>
           </div>
-
-          <figure class="media-card media-portrait">
-            <img src="oulu-birch-walk.png" alt="Snow-covered birch-lined street in Oulu" />
-          </figure>
+          <p class="oulu-intro">The school takes place in Oulu, where snowy landscapes and a calm campus environment create a distinctive setting for an intensive week of learning and collaboration.</p>
         </div>
+
+        <figure class="wide-photo">
+          <img src="oulu-forest-path.png" alt="Snow-covered path in Oulu" />
+        </figure>
       </div>
     </section>
 
     <section class="section section-dark" id="venue">
       <div class="container venue-grid">
         <div class="venue-copy">
-          <p class="section-kicker light">Venue &amp; format</p>
+          <p class="eyebrow light">Venue &amp; format</p>
           <h2>Hosted at the University of Oulu</h2>
-          <p>The winter school will take place at the University of Oulu, combining focused lectures, collaborative discussion, and hands-on practical sessions in a welcoming academic setting.</p>
-          <ul class="feature-list">
-            <li>Five days of intensive learning</li>
-            <li>2–3 hour expert lectures</li>
-            <li>15-minute participant flash talks with a best-talk prize</li>
-            <li>Poster presentations with a best-poster prize</li>
-            <li>Two practical sessions for hands-on quantum circuit creation</li>
+          <p>The winter school combines focused lectures, collaborative discussion, and hands-on practical sessions in a welcoming academic setting.</p>
+          <ul class="format-list">
+            <li><strong>Five days</strong><span>of intensive learning</span></li>
+            <li><strong>2–3 hour</strong><span>expert lectures</span></li>
+            <li><strong>15-minute</strong><span>participant flash talks and best-talk prize</span></li>
+            <li><strong>Poster session</strong><span>with best-poster prize</span></li>
+            <li><strong>Two practical sessions</strong><span>for hands-on quantum circuit creation</span></li>
           </ul>
         </div>
-
-        <figure class="media-card media-interior dark-card">
+        <figure class="venue-photo">
           <img src="oulu-university-interior.png" alt="Interior at the University of Oulu" />
         </figure>
       </div>
     </section>
 
     <section class="section" id="programme">
-      <div class="container programme-wrap">
-        <div class="programme-intro">
-          <p class="section-kicker">Programme</p>
+      <div class="container programme-grid">
+        <div class="section-heading compact">
+          <p class="eyebrow">Programme</p>
           <h2>15–19 March 2027</h2>
-          <p>The detailed day-by-day programme, confirmed lecturers, and session schedule will be published as they are finalised. The structure below shows the planned flow of the week.</p>
+          <p class="muted">The detailed day-by-day programme and confirmed lecturers will be published as they are finalised.</p>
         </div>
-
-        <div class="programme-card">
-          <div class="programme-row"><span>Day 1</span><strong>Foundations &amp; Hardware</strong></div>
-          <div class="programme-row"><span>Day 2</span><strong>Control &amp; Open Systems</strong></div>
-          <div class="programme-row"><span>Day 3</span><strong>Algorithms &amp; Applications</strong></div>
-          <div class="programme-row"><span>Day 4</span><strong>Hands-on Quantum Computing</strong></div>
-          <div class="programme-row"><span>Day 5</span><strong>Careers, Ecosystem &amp; Community</strong></div>
-          <p class="programme-note">Indicative structure. Final programme to be announced.</p>
+        <div class="programme-list">
+          <div><span>Day 1</span><strong>Foundations &amp; Hardware</strong></div>
+          <div><span>Day 2</span><strong>Control &amp; Open Systems</strong></div>
+          <div><span>Day 3</span><strong>Algorithms &amp; Applications</strong></div>
+          <div><span>Day 4</span><strong>Hands-on Quantum Computing</strong></div>
+          <div><span>Day 5</span><strong>Careers, Ecosystem &amp; Community</strong></div>
         </div>
       </div>
     </section>
 
     <section class="section contact-section" id="contact">
-      <div class="container contact-grid contact-grid-simple">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>See you in Oulu</h2>
-          <p class="address-block">University of Oulu<br />Pentti Kaiteran katu 1<br />90570 Oulu, Finland</p>
-        </div>
-        <div class="contact-card contact-card-simple">
-          <div>
+      <div class="container contact-simple">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <div class="contact-links">
+          <a href="mailto:alina.sanchez@oulu.fi">
             <span>Email</span>
-            <a href="mailto:alina.sanchez@oulu.fi">alina.sanchez@oulu.fi</a>
-          </div>
-          <div>
+            <strong>alina.sanchez@oulu.fi</strong>
+          </a>
+          <a href="https://aqcws.github.io">
             <span>Website</span>
-            <a href="https://aqcws.github.io">aqcws.github.io</a>
-          </div>
+            <strong>aqcws.github.io</strong>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-row">
-      <img src="aq-logo-transparent.png" alt="Applied Quantum Computing Winter School" />
-      <p>Applied Quantum Computing Winter School · University of Oulu · 15–19 March 2027</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="aq-symbol.png" alt="AQ symbol" />
+        <span>Applied Quantum Computing Winter School</span>
+      </div>
+      <p>University of Oulu · 15–19 March 2027</p>
     </div>
   </footer>
 
