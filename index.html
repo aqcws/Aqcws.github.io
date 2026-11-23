@@ -20,8 +20,8 @@
     #speakers .speaker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
     #speakers .speaker-card { border: 1px solid #dfE8f1; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 9px 30px rgba(11, 40, 71, .055); min-width: 0; }
     #speakers .speaker-card-inner { display: grid; grid-template-columns: 174px minmax(0,1fr); min-height: 100%; }
-    #speakers .speaker-photo { background: #dfeaf3; position: relative; min-height: 320px; overflow: hidden; }
-    #speakers .speaker-photo img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center 28%; display: block; }
+    #speakers .speaker-photo { background: #e8eff5; display: flex; align-items: center; justify-content: center; min-height: 320px; padding: 12px; }
+    #speakers .speaker-photo img { display: block; position: static; width: 100%; height: auto; max-height: 450px; object-fit: contain; border-radius: 8px; }
     #speakers .speaker-info { padding: 27px 25px 30px; }
     #speakers .speaker-label { display: inline-flex; align-items: center; background: #e8f2fb; color: #1c5b91; font-size: .73rem; font-weight: 700; border-radius: 50px; padding: 6px 11px; margin-bottom: 15px; letter-spacing: .03em; }
     #speakers .speaker-info h3 { font-size: 1.45rem; color: #102c4e; margin: 0 0 8px; line-height: 1.25; }
@@ -29,7 +29,7 @@
     #speakers .speaker-bio { color: #42536a; font-size: .88rem; line-height: 1.72; margin: 0 0 13px; }
     #speakers .speaker-bio:last-child { margin-bottom: 0; }
     @media (max-width: 1080px) { #speakers .speaker-grid { grid-template-columns: 1fr; } #speakers .speaker-card-inner { grid-template-columns: 230px minmax(0, 1fr); } }
-    @media (max-width: 600px) { #speakers .speaker-card-inner { grid-template-columns: 1fr; } #speakers .speaker-photo { height: 285px; min-height: 0; } #speakers .speaker-photo img { object-position: center 29%; } #speakers .speaker-info { padding: 23px 21px 27px; } }
+    @media (max-width: 600px) { #speakers .speaker-card-inner { grid-template-columns: 1fr; } #speakers .speaker-photo { min-height: 0; padding: 16px; } #speakers .speaker-photo img { max-height: 350px; } #speakers .speaker-info { padding: 23px 21px 27px; } }
   </style>
 
 </head>
