@@ -1,0 +1,25 @@
+APPLIED QUANTUM COMPUTING WINTER SCHOOL 2027 — WEBSITE UPDATE
+
+Upload the nine files in this ZIP to the ROOT of your existing GitHub Pages repository:
+  index.html
+  about.html
+  topics.html
+  audience.html
+  venue.html
+  programme.html
+  speakers.html
+  contact.html
+  site-pages.css
+
+Keep your existing files UNCHANGED:
+  styles.css, script.js, aq-symbol.png, existing event photographs,
+  assets/speakers/paulina-rajala.jpg, assets/speakers/kimmo-halunen.jpg
+
+Do not upload the ZIP itself. Extract it, select the nine files, and commit.
+
+Every main navigation item links to its own HTML page. The homepage contains
+only the event hero, a speaker link, and a page directory, not the full sections.
+The speakers page uses the exact names of the JPG files in assets/speakers/.
+
+If you test locally, keep the files next to the original styles.css/script.js
+and original image assets; otherwise the local copy will have missing resources.
