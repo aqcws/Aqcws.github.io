@@ -11,6 +11,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Speakers & Panelists. Scoped to avoid modifying existing site styles. */
+    #speakers { scroll-margin-top: 96px; background: #f3f7fb; }
+    #speakers .speaker-heading { max-width: 760px; margin-bottom: 34px; }
+    #speakers .speaker-heading h2 { color: #102b4a; margin-bottom: 12px; }
+    #speakers .speaker-heading > p:last-child { color: #52647b; line-height: 1.7; }
+    #speakers .speaker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+    #speakers .speaker-card { border: 1px solid #dfE8f1; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 9px 30px rgba(11, 40, 71, .055); min-width: 0; }
+    #speakers .speaker-card-inner { display: grid; grid-template-columns: 174px minmax(0,1fr); min-height: 100%; }
+    #speakers .speaker-photo { background: #dfeaf3; position: relative; min-height: 320px; overflow: hidden; }
+    #speakers .speaker-photo img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center 28%; display: block; }
+    #speakers .speaker-photo-fallback { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg,#153b63,#2675a7); color: #fff; }
+    #speakers .speaker-photo-fallback span { font-size: 3.1rem; font-weight: 700; letter-spacing: -.06em; }
+    #speakers .speaker-info { padding: 27px 25px 30px; }
+    #speakers .speaker-label { display: inline-flex; align-items: center; background: #e8f2fb; color: #1c5b91; font-size: .73rem; font-weight: 700; border-radius: 50px; padding: 6px 11px; margin-bottom: 15px; letter-spacing: .03em; }
+    #speakers .speaker-info h3 { font-size: 1.45rem; color: #102c4e; margin: 0 0 8px; line-height: 1.25; }
+    #speakers .speaker-role { color: #315c81; font-weight: 600; font-size: .91rem; line-height: 1.55; margin: 0 0 18px; }
+    #speakers .speaker-bio { color: #42536a; font-size: .88rem; line-height: 1.72; margin: 0 0 13px; }
+    #speakers .speaker-bio:last-child { margin-bottom: 0; }
+    @media (max-width: 1080px) { #speakers .speaker-grid { grid-template-columns: 1fr; } #speakers .speaker-card-inner { grid-template-columns: 230px minmax(0, 1fr); } }
+    @media (max-width: 600px) { #speakers .speaker-card-inner { grid-template-columns: 1fr; } #speakers .speaker-photo { height: 285px; min-height: 0; } #speakers .speaker-photo img { object-position: center 29%; } #speakers .speaker-info { padding: 23px 21px 27px; } }
+  </style>
+
 </head>
 <body>
   <header class="site-header" id="top">
@@ -30,6 +53,7 @@
         <a href="#audience">Audience</a>
         <a href="#venue">Venue</a>
         <a href="#programme">Programme</a>
+        <a href="#speakers">Speakers &amp; Panelists</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -155,6 +179,51 @@
     </div>
   </div>
 </section>
+
+
+    <!-- Speakers & Panelists: add future speakers here as new speaker-card articles. -->
+    <section class="section" id="speakers" aria-labelledby="speakers-title">
+      <div class="container">
+        <div class="speaker-heading">
+          <p class="section-kicker">Meet our experts</p>
+          <h2 id="speakers-title">Speakers &amp; Panelists</h2>
+          <p>Meet the researchers and professionals contributing their experience to the Applied Quantum Computing Winter School.</p>
+        </div>
+        <div class="speaker-grid">
+          <article class="speaker-card">
+            <div class="speaker-card-inner">
+              <div class="speaker-photo">
+                <img src="assets/speakers/paulina-rajala.jpg" alt="Paulina Rajala" loading="lazy" decoding="async" />
+              </div>
+              <div class="speaker-info">
+                <span class="speaker-label">Invited expert</span>
+                <h3>Paulina Rajala</h3>
+                <p class="speaker-role">Development Manager, InstituteQ<br>National Quantum Institute of Finland</p>
+                <p class="speaker-bio">Paulina Rajala is Development Manager at InstituteQ, the National Quantum Institute of Finland. She leads strategic planning, operational coordination, and community-building to support Finland’s national quantum technology initiative. Her work connects researchers, institutions, and stakeholders nationally and internationally.</p>
+                <p class="speaker-bio">Previously, she worked in science and technology diplomacy at the UK Foreign Office. She holds a PhD in Microbiology from the University of Helsinki and has over a decade of research experience, including roles at VTT Technical Research Centre of Finland and Nanyang Technological University.</p>
+              </div>
+            </div>
+          </article>
+          <article class="speaker-card">
+            <div class="speaker-card-inner">
+              <div class="speaker-photo speaker-photo-fallback">
+                <!-- Replace the placeholder below with:
+                     <img src="assets/speakers/kimmo-halunen.jpg" alt="Professor Kimmo Halunen" loading="lazy" decoding="async" />
+                     after uploading his official photograph to GitHub. -->
+                <span aria-hidden="true">KH</span>
+              </div>
+              <div class="speaker-info">
+                <span class="speaker-label">Invited expert</span>
+                <h3>Prof. Kimmo Halunen</h3>
+                <p class="speaker-role">Professor of Cybersecurity<br>University of Oulu &amp; National Defence University, Finland</p>
+                <p class="speaker-bio">Kimmo Halunen received his D.Sc. (Tech.) in computer engineering in 2012, specializing in hash function security. He has authored over 60 publications on security, cryptography, cyberwarfare, and blockchain technology. He has coordinated a national project in post-quantum cryptography and led national and international cybersecurity and cryptography projects.</p>
+                <p class="speaker-bio">He has provided expert input to the Finnish government and Parliament. Before becoming a professor, he worked at VTT for eight years and visited KU Leuven’s COSIC group in 2014–2015. Since July 2024, he has also been a board member of Xiphera, a Finnish cryptographic hardware company.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="section contact-section" id="contact">
       <div class="container contact-inner">
