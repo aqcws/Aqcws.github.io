@@ -1,0 +1,51 @@
+/* Addition to the existing Winter School stylesheet: navigation and subpages */
+:root { --aq-ink:#122e50; --aq-blue:#25689d; }
+/* Desktop: prevent the long speaker menu link from crowding the header. */
+@media (min-width: 1061px) {
+ .site-header .nav-wrap { display:flex !important; align-items:center !important; justify-content:space-between !important; gap: 16px 24px !important; flex-wrap:wrap !important; padding-top:12px; padding-bottom:12px; }
+ .site-header .brand { flex-shrink:0; }
+ .site-header .nav-links { display:flex !important; gap:clamp(10px,1.25vw,20px) !important; align-items:center; flex-wrap:wrap; justify-content:flex-end; min-width:0; }
+ .site-header .nav-links a { white-space:nowrap; font-size:clamp(.79rem,.92vw,.96rem); }
+}
+@media (max-width:1060px) and (min-width:781px) {
+ .site-header .nav-wrap { display:flex; gap:12px; flex-wrap:wrap; padding-top:14px; padding-bottom:14px; }
+ .site-header .nav-links { display:flex !important; gap:10px 16px !important; flex-wrap:wrap; align-items:center; }
+ .site-header .nav-links a { white-space:nowrap; font-size:.85rem; }
+}
+.site-header .nav-links a[aria-current="page"] { color:#81ceff; }
+.aq-page-shell { min-height:calc(100vh - 245px); background:#f4f8fc; color:#203a59; padding:clamp(50px,7vw,95px) 0; }
+.aq-page-shell .container { max-width:1180px; }
+.aq-page-heading { margin-bottom:34px; }
+.aq-page-heading .section-kicker { color:#367cae; font-weight:700; }
+.aq-page-heading h1 { margin:9px 0 14px; font-size:clamp(2.2rem,4vw,3.5rem); line-height:1.12; color:#102b4a; }
+.aq-page-heading p { max-width:760px; line-height:1.7; color:#53677d; }
+.aq-page-shell .section { padding:0 !important; background:transparent !important; }
+.aq-page-shell .section .container { width:100%; }
+.aq-page-shell .section-heading h2 { color:#102b4a; }
+.aq-page-shell .venue-section { color:#1a3452; }
+.aq-page-shell .venue-copy h2,.aq-page-shell .venue-copy p,.aq-page-shell .feature-list { color:#173758; }
+.aq-page-shell .contact-section { background:transparent; }
+.aq-page-shell .contact-section h2 { color:#102b4a; }
+.aq-page-shell .contact-links a { background:#fff; }
+.aq-home-links { padding:60px 20px 75px; background:#f4f8fc; }
+.aq-home-links .container { max-width:1120px; }
+.aq-home-links h2 { color:#102b4a; font-size:clamp(1.9rem,3vw,2.6rem); margin-bottom:24px; }
+.aq-tiles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.aq-tiles a { display:block; text-decoration:none; border:1px solid #dce8f2; border-radius:14px; padding:24px; background:white; color:#133a63; font-weight:700; box-shadow:0 6px 24px rgba(17,46,79,.04); }
+.aq-tiles a:hover,.aq-tiles a:focus-visible { border-color:#4a91c5; transform:translateY(-2px); }
+/* Speakers: portrait and landscape are both shown fully. */
+.aq-page-shell #speakers .speaker-heading { max-width:760px; margin-bottom:28px; }
+.aq-page-shell #speakers .speaker-heading h2 { color:#102b4a; }
+.aq-page-shell #speakers .speaker-heading>p:last-child { color:#52647b; line-height:1.7; }
+.aq-page-shell #speakers .speaker-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:stretch; }
+.aq-page-shell #speakers .speaker-card { background:#fff; border:1px solid #dfe8f1; border-radius:18px; overflow:hidden; min-width:0; box-shadow:0 9px 30px rgba(11,40,71,.06); }
+.aq-page-shell #speakers .speaker-card-inner { display:flex; flex-direction:column; height:100%; }
+.aq-page-shell #speakers .speaker-photo { width:100%; height:300px; min-height:0; padding:14px; display:flex; align-items:center; justify-content:center; background:#e7eff6; }
+.aq-page-shell #speakers .speaker-photo img { display:block; position:static !important; max-width:100%; max-height:100%; width:auto !important; height:auto !important; object-fit:contain !important; border-radius:6px; }
+.aq-page-shell #speakers .speaker-info { padding:26px 28px 32px; }
+.aq-page-shell #speakers .speaker-label { display:inline-block; color:#1c5b91; background:#e8f2fb; padding:6px 12px; border-radius:40px; margin-bottom:15px; font-size:.74rem; font-weight:700; }
+.aq-page-shell #speakers .speaker-info h3 { color:#102b4a; font-size:1.45rem; margin:0 0 8px; }
+.aq-page-shell #speakers .speaker-role { color:#315c81; font-weight:600; line-height:1.55; margin:0 0 18px; }
+.aq-page-shell #speakers .speaker-bio { color:#42536a; line-height:1.76; margin:0 0 14px; }
+@media(max-width:840px) { .aq-tiles { grid-template-columns:repeat(2,minmax(0,1fr)); } .aq-page-shell #speakers .speaker-grid { grid-template-columns:1fr; } }
+@media(max-width:540px) { .aq-tiles { grid-template-columns:1fr; } .aq-page-shell #speakers .speaker-photo { height:270px; } .aq-page-shell #speakers .speaker-info { padding:22px; } }
