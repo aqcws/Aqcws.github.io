@@ -22,8 +22,6 @@
     #speakers .speaker-card-inner { display: grid; grid-template-columns: 174px minmax(0,1fr); min-height: 100%; }
     #speakers .speaker-photo { background: #dfeaf3; position: relative; min-height: 320px; overflow: hidden; }
     #speakers .speaker-photo img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center 28%; display: block; }
-    #speakers .speaker-photo-fallback { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg,#153b63,#2675a7); color: #fff; }
-    #speakers .speaker-photo-fallback span { font-size: 3.1rem; font-weight: 700; letter-spacing: -.06em; }
     #speakers .speaker-info { padding: 27px 25px 30px; }
     #speakers .speaker-label { display: inline-flex; align-items: center; background: #e8f2fb; color: #1c5b91; font-size: .73rem; font-weight: 700; border-radius: 50px; padding: 6px 11px; margin-bottom: 15px; letter-spacing: .03em; }
     #speakers .speaker-info h3 { font-size: 1.45rem; color: #102c4e; margin: 0 0 8px; line-height: 1.25; }
@@ -206,11 +204,8 @@
           </article>
           <article class="speaker-card">
             <div class="speaker-card-inner">
-              <div class="speaker-photo speaker-photo-fallback">
-                <!-- Replace the placeholder below with:
-                     <img src="assets/speakers/kimmo-halunen.jpg" alt="Professor Kimmo Halunen" loading="lazy" decoding="async" />
-                     after uploading his official photograph to GitHub. -->
-                <span aria-hidden="true">KH</span>
+              <div class="speaker-photo">
+                <img src="assets/speakers/kimmo-halunen.jpg" alt="Professor Kimmo Halunen" loading="lazy" decoding="async" />
               </div>
               <div class="speaker-info">
                 <span class="speaker-label">Invited expert</span>
