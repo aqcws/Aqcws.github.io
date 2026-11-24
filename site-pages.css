@@ -57,7 +57,7 @@
 .person-card { display:grid; grid-template-columns:minmax(230px,310px) minmax(0,1fr); align-items:stretch; background:#fff; border:1px solid var(--page-line); border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(15,48,84,.05); }
 .person-photo { background:#e5edf5; height:100%; min-height:360px; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:15px; }
 .person-photo img { display:block; position:static; width:100%; height:100%; max-width:none; max-height:none; object-fit:cover; object-position:center 35%; border-radius:8px; }
-.person-card:nth-child(2) .person-photo img {   object-position: 52% 28%;   transform: scale(1.5);   transform-origin: center 30%; }
+.person-card:nth-child(2) .person-photo img { object-position:74% 43%; }
 .person-copy { padding:clamp(24px,3.3vw,43px); }
 .person-copy h3 { font-size:clamp(25px,2.5vw,31px); margin:0 0 8px; color:var(--page-ink); }
 .person-role { color:#235b87; font-weight:700; margin-bottom:22px; line-height:1.55; }
@@ -82,3 +82,16 @@
  .person-copy { padding:23px; }
 }
 @media(prefers-reduced-motion:reduce) { .landing-feature,.explore-grid a { transition:none; } }
+
+/* Hybrid structure: the homepage contains the five informational sections. */
+html { scroll-behavior:smooth; scroll-padding-top:88px; }
+#about, #topics, #audience, #venue, #contact { scroll-margin-top:88px; }
+.hybrid-links { background:#f3f7fc; padding:72px 0; }
+.hybrid-links-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.hybrid-links-grid a { display:flex; flex-direction:column; gap:10px; background:#fff; border:1px solid #dbe5ef; border-radius:16px; padding:28px; box-shadow:0 8px 24px rgba(15,48,84,.05); }
+.hybrid-links-grid a span { font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#2870a4; }
+.hybrid-links-grid a strong { font-size:25px; color:#122d4d; }
+.hybrid-links-grid a small { font-size:15px; color:#53677e; }
+@media(max-width:620px) { .hybrid-links-grid { grid-template-columns:1fr; } .hybrid-links { padding:50px 0; } }
+/* The face-aware crop only affects Kimmo's photograph. */
+.person-card:nth-child(2) .person-photo img { object-position:52% 30%; transform:scale(1.35); transform-origin:center 32%; }
