@@ -93,5 +93,38 @@ html { scroll-behavior:smooth; scroll-padding-top:88px; }
 .hybrid-links-grid a strong { font-size:25px; color:#122d4d; }
 .hybrid-links-grid a small { font-size:15px; color:#53677e; }
 @media(max-width:620px) { .hybrid-links-grid { grid-template-columns:1fr; } .hybrid-links { padding:50px 0; } }
-/* The face-aware crop only affects Kimmo's photograph. */
-.person-card:nth-child(2) .person-photo img { object-position:52% 30%; transform:scale(1.35); transform-origin:center 32%; }
+
+
+/* Layout corrections: header should never obscure the homepage hero text. */
+.home-page .site-header,
+.inner-page .site-header {
+  position: relative;
+  inset: auto;
+  z-index: 30;
+  background: #07172a;
+}
+.site-header .nav-wrap { min-height: 84px; }
+.site-header .brand { display: flex; align-items: center; flex: 0 0 auto; gap: 12px; max-width: 330px; text-decoration: none; }
+.site-header .brand img { display:block; flex:0 0 auto; width:50px; height:50px; object-fit:contain; }
+.site-header .brand span { display:block; font-size:15px; line-height:1.2; }
+.site-header .brand small { display:inline-block; font-size:12px; letter-spacing:.03em; }
+.home-page .hero { min-height:560px; height:auto; max-height:none; }
+.home-page .hero-content { position:relative; padding-top:90px; padding-bottom:95px; }
+.home-page .hero-copy { position:relative; z-index:1; }
+@media(max-width:640px) {
+  .site-header .brand { max-width:calc(100% - 75px); }
+  .site-header .brand img { width:42px; height:42px; }
+  .site-header .brand span { font-size:13px; }
+  .site-header .brand small { font-size:11px; }
+  .home-page .hero-content { padding-top:62px; padding-bottom:70px; }
+}
+/* Restore both original speaker photos without destructive zoom or face cropping. */
+.person-card .person-photo { min-width:0; height:420px; min-height:0; padding:14px; background:#e5edf5; }
+.person-card .person-photo img,
+.person-card:nth-child(2) .person-photo img {
+  position:static; display:block; width:100%; height:100%; max-width:100%; max-height:100%;
+  object-fit:contain; object-position:center center; transform:none; transform-origin:center center;
+  border-radius:8px;
+}
+@media(max-width:850px) { .person-card .person-photo { height:340px; } }
+@media(max-width:620px) { .person-card .person-photo { height:280px; } }
