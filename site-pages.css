@@ -144,3 +144,15 @@ html { scroll-behavior:smooth; scroll-padding-top:88px; }
 .schedule-note a { color: #216497; font-weight: 700; }
 @media (max-width: 950px) { .upcoming-speaker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 610px) { .upcoming-speaker-grid { grid-template-columns: 1fr; } .upcoming-speakers { padding-bottom: 58px; } }
+
+/* Uniform portrait photo frames for complete speaker profiles. */
+.speaker-list .person-photo { height: 440px; min-height: 0; padding: 12px; }
+.speaker-list .person-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transform: none; border-radius: 9px; }
+/* Kimmo is positioned to the right in the original landscape JPG. Crop around him. */
+.speaker-list .person-card-kimmo .person-photo img { object-position: 83% 48%; transform: none; }
+/* Teresa's portrait follows the same image frame. */
+@media (max-width: 850px) { .speaker-list .person-photo { height: 390px; } }
+@media (max-width: 620px) { .speaker-list .person-photo { height: 350px; } }
+/* Names-only list: no temporary progress labels. */
+.upcoming-speaker-card { display: flex; align-items: center; min-height: 110px; }
+.upcoming-speaker-card h3 { margin: 0; }
